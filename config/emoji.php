@@ -40,6 +40,6 @@ return [
         'emoji_size'    => 32,
 
         // emoji version
-        'emoji_version' => '5.0',
+        'emoji_version' => '5.5',
     ],
 ];
