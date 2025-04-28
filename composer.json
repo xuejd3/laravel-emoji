@@ -3,7 +3,7 @@
     "description": "An emojione bridge for Laravel",
     "type": "library",
     "require": {
-        "joypixels/emoji-toolkit": "^6.0"
+        "joypixels/emoji-toolkit": "^9.0"
     },
     "license": "MIT",
     "authors": [
@@ -29,5 +29,8 @@
                 "Emoji": "Xuejd3\\LaravelEmoji\\Emoji"
             }
         }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.22"
     }
 }

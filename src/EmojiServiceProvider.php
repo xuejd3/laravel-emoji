@@ -11,18 +11,20 @@
 
 namespace Xuejd3\LaravelEmoji;
 
+use Illuminate\Support\ServiceProvider;
 use JoyPixels\Client;
 use JoyPixels\Ruleset;
-use Illuminate\Support\ServiceProvider;
 
 /**
  * Class EmojiServiceProvider.
+ *
  * @author xuejd3 <xuejd3@gmail.com>
  */
 class EmojiServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
+     *
      * @var bool
      */
     protected $defer = true;
@@ -34,7 +36,7 @@ class EmojiServiceProvider extends ServiceProvider
     {
         if (! file_exists(config_path('emoji.php'))) {
             $this->publishes([
-                __DIR__ . '/../config/emoji.php' => config_path('emoji.php'),
+                __DIR__.'/../config/emoji.php' => config_path('emoji.php'),
             ], 'laravel-emoji');
         }
 
@@ -46,10 +48,10 @@ class EmojiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(dirname(__DIR__) . '/config/emoji.php', 'emoji');
+        $this->mergeConfigFrom(dirname(__DIR__).'/config/emoji.php', 'emoji');
 
         $this->app->singleton(Client::class, function () {
-            $client = new Client(new Ruleset());
+            $client = new Client(new Ruleset);
 
             if ($path = config('emoji.options.image_path')) {
                 $client->imagePathPNG = $path;
@@ -71,6 +73,7 @@ class EmojiServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
+     *
      * @return array
      */
     public function provides()

@@ -17,27 +17,27 @@ return [
     /*
      * Client options
      */
-    'options'               => [
+    'options' => [
         // defaults to jsdelivr's free CDN
-        'image_path'    => null,
+        'image_path' => null,
 
         // use sprite image.
-        'sprites'       => false,
+        'sprites' => false,
 
         // available sizes are '32' and '64'
-        'sprite_size'   => 32,
+        'sprite_size' => 32,
 
         // convert ascii smileys?
-        'ascii'         => false,
+        'ascii' => false,
 
         // convert shortcodes?
-        'shortcodes'    => true,
+        'shortcodes' => true,
 
         // use the unicode char as the alt attribute (makes copy and pasting the resulting text better)
-        'unicode_alt'   => true,
+        'unicode_alt' => true,
 
         // available sizes are '32', '64', and '128'
-        'emoji_size'    => 32,
+        'emoji_size' => 32,
 
         // emoji version
         'emoji_version' => '6.0',

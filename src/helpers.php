@@ -15,8 +15,7 @@ if (! function_exists('emoji')) {
     /**
      * Convert emoji shortname to image.
      *
-     * @param string $shortname
-     *
+     * @param  string  $shortname
      * @return string
      */
     function emoji($shortname)
