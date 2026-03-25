@@ -11,6 +11,7 @@
 
 namespace Xuejd3\LaravelEmoji;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use JoyPixels\Client;
 use JoyPixels\Ruleset;
@@ -87,7 +88,7 @@ class EmojiServiceProvider extends ServiceProvider
     protected function registerBladeDirectiveIfNeeded()
     {
         if (class_exists('Illuminate\Support\Facades\Blade')) {
-            \Illuminate\Support\Facades\Blade::directive('emoji', function ($expression) {
+            Blade::directive('emoji', function ($expression) {
                 return "<?php echo emoji({$expression}); ?>";
             });
         }
